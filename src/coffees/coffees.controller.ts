@@ -20,7 +20,6 @@ export class CoffeesController {
 
   @Get()
   findAll(@Query() paginationQuery: PaginationQueryDto) {
-    const { offset, limit } = paginationQuery;
     return this.coffeeService.findAll(paginationQuery);
   }
 
